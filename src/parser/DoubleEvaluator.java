@@ -19,10 +19,10 @@ public class DoubleEvaluator implements ExpressionEvaluator<Double> {
                 v = Double.toString(convert(num2) - convert(num1));
                 break;
             case '+':
-                v = Double.toString(convert(num1) + convert(num2));
+                v = Double.toString(convert(num2) + convert(num1));
                 break;
             case '*':
-                v = Double.toString(convert(num1) * convert(num2));
+                v = Double.toString(convert(num2) * convert(num1));
                 break;
             case '/':
                 v = Double.toString(convert(num2) / convert(num1));

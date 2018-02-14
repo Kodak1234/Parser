@@ -5,11 +5,12 @@ import parser.Parser;
 
 public class Test {
     public static void main(String[] args) {
+        String x = "10/2+4*2";
         Parser<Double> p = new Parser.Builder<Double>()
-                .defaultDouble()
+                .defaultDouble()//use interface implementation provided by the api
                 .build();
 
-        double s = p.parse("cos(2*(pi))-1");
+        double s = p.parse(x);//parse the expression
         p.getLogger().dumpLog();
         System.out.println(s);
     }
